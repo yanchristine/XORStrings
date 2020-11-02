@@ -2,6 +2,8 @@
 # Period 5
 # Cybersecurity Fall 2020
 
+# XOR String Assignment
+
 import sys
 mode = sys.argv[1]
 keyfile = sys.argv[2]
