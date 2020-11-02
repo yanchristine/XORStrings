@@ -33,12 +33,12 @@ def human(key, inp):
 def numOut(key, inp):
     output = ""
     for i in range(len(inp)):
-        output = output
+        output = output + hex(ord(key[i]) ^ ord(inp[i]))[2:] + " "
     return output
 
 if (len(key) < len(inp)):
     key = iterate(key, inp)
 if (mode == "human"):
-    print(human(key,inp))
+    print(human(key, inp))
 else:
-    print(numOut(key,inp))
+    print(numOut(key, inp))
