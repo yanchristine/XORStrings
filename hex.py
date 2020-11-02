@@ -15,5 +15,20 @@ if(debug):
     print("mode:"+mode)
     print("key: "+key)
     print("inp: "+inp)
+            
+def human(key, inp):
+    output = ""
+    for i in range(len(inp)):
+        output = output
+    return output
+    
+def numOut(key, inp):
+    output = ""
+    for i in range(len(inp)):
+        output = output
+    return output
 
-#YOUR CODE HERE!
+if (mode == "human"):
+    print(human(key,inp))
+else:
+    print(numOut(key,inp))
