@@ -15,11 +15,19 @@ if(debug):
     print("mode:"+mode)
     print("key: "+key)
     print("inp: "+inp)
-            
+    
+def iterate(key, inp):
+    str = ""
+    count = 0
+    while (count < len(inp)):
+        str = str + key[count % len(key)]
+        count += 1
+    return str
+
 def human(key, inp):
     output = ""
     for i in range(len(inp)):
-        output = output
+        output = output + chr(ord(key[i]) ^ ord(inp[i]))
     return output
     
 def numOut(key, inp):
@@ -28,6 +36,8 @@ def numOut(key, inp):
         output = output
     return output
 
+if (len(key) < len(inp)):
+    key = iterate(key, inp)
 if (mode == "human"):
     print(human(key,inp))
 else:
