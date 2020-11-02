@@ -29,21 +29,21 @@ key1 ="A"
 key2 ="FISH"
 message1="hello"
 message2=")$--."
-message3="this is a test"
+message3=" this is a test"
 message4="f=;!5i:;f(s<#:'"
 
-$ make  run ARGS="human key1 message1"
+$ make run ARGS="human key1 message1"
 python hex.py human key1 message1
 )$--.
 
-$ make  run ARGS="human key1 message2"
+$ make run ARGS="human key1 message2"
 hello
 
-$ make  run ARGS="human key2 message3"
+$ make run ARGS="human key2 message3"
 f=;!5i:;f(s<#:'
 
-$ make  run ARGS="human key2 message4"
-this is a test
+$ make run ARGS="human key2 message4"
+ this is a test
 
 PART 2: NumberOutput mode:
 When mode is set to NumberOutput, the output should be in space separated hex values:
@@ -58,4 +58,4 @@ $ make run ARGS="numOut key2 message3"
 66 3d 3b 21 35 69 3a 3b 66 28 73 3c 23 3a 27
 
 $ make run ARGS="numOut key2 message4"
-74 68 69 73 20 69 73 20 61 20 74 65 73 74
+20 74 68 69 73 20 69 73 20 61 20 74 65 73 74
